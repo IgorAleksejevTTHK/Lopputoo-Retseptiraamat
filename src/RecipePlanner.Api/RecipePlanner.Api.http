@@ -1,0 +1,48 @@
+@host = http://localhost:5120
+
+### Search recipes by name
+GET {{host}}/api/recipes?search=soup
+
+### Search by ingredient, sorted by prep time, page 1
+GET {{host}}/api/recipes?ingredient=chicken&sortBy=prepTime&sortDir=asc&page=1&pageSize=5
+
+### Recipe details
+GET {{host}}/api/recipes/2
+
+### Not found -> 404
+GET {{host}}/api/recipes/9999
+
+### Create recipe -> 201
+POST {{host}}/api/recipes
+Content-Type: application/json
+
+{
+  "title": "Potato soup",
+  "description": "Simple and warm soup.",
+  "servings": 4,
+  "prepTimeMinutes": 40,
+  "categoryId": 2,
+  "ingredients": [
+    { "name": "Potato", "quantity": 500, "unit": "g" },
+    { "name": "Onion", "quantity": 1, "unit": "pcs" }
+  ],
+  "steps": [
+    { "instruction": "Peel and dice the potatoes." },
+    { "instruction": "Boil for 20 minutes, blend." }
+  ]
+}
+
+### Invalid body -> 400
+POST {{host}}/api/recipes
+Content-Type: application/json
+
+{ "title": "x", "categoryId": 2, "ingredients": [], "steps": [] }
+
+### Delete -> 204
+DELETE {{host}}/api/recipes/5
+
+### Categories and ingredients
+GET {{host}}/api/categories
+
+###
+GET {{host}}/api/ingredients?search=po
