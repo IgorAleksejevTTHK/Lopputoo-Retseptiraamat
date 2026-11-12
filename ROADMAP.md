@@ -1,7 +1,8 @@
 # Roadmap
 
 Target grade: **4** (Programming + Distributed Applications).
-Stack: ASP.NET Core 8 Web API, EF Core 8 + SQLite, xUnit + Moq, React (Vite).
+Stack: ASP.NET Core 8 Web API, EF Core 8 + SQLite, xUnit + Moq, .NET MAUI mobile client (MVVM, CommunityToolkit.Mvvm).
+This is a mobile topic: the main client is the MAUI app.
 
 Deadline: 30.11.2026. One step per working day.
 
@@ -14,10 +15,10 @@ Deadline: 30.11.2026. One step per working day.
 | 18.11 | Global error handling with ProblemDetails (custom exceptions, `IExceptionHandler`, no try/catch in controllers), logging | todo |
 | 19.11 | Unit tests: at least 8, at least 2 with Moq | todo |
 | 20.11 | JWT: register/login, password hashing, PasswordHash migration | todo |
-| 23.11 | Roles User/Admin/Service, `[Authorize]`, ownership checks, Swagger Authorize button, CORS | todo |
-| 24.11 | React (Vite) client: setup, API client, login, recipe list with search/filter/sort/paging | todo |
-| 25.11 | React: recipe details with servings switch, create/edit form with client validation | todo |
-| 26.11 | React: weekly meal plan view | todo |
+| 23.11 | Roles User/Admin/Service, `[Authorize]`, ownership checks, Swagger Authorize button, CORS (for future web clients) | todo |
+| 24.11 | MAUI: src/RecipePlanner.Mobile.Core (net8.0: ViewModels with CommunityToolkit.Mvvm, API client with JWT) + src/RecipePlanner.Mobile (MAUI Shell, DI, pages), login and recipe list with search/filter/sort/paging; GitHub Actions workflow that builds the MAUI app (Android) on windows-latest | todo |
+| 25.11 | MAUI: recipe details with servings switch, create/edit form with client-side validation (ViewModel validation) | todo |
+| 26.11 | MAUI: weekly meal plan page (add/remove recipes per day) | todo |
 | 27.11 | English README, Estonian documentation (school template) as PDF | todo |
 
-Out of scope (grade 5): shopping list, sharing, Worker Service, WebSocket, second client.
+Out of scope (grade 5): shopping list, sharing, Worker Service, WebSocket, second client (web admin).

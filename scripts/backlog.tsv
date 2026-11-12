@@ -12,8 +12,8 @@
 8	Ühiktestid (vähemalt 8, neist 2 mockiga)	backend,testid	Nädal 2	E7 Testid ja kvaliteet	3	2026-11-19	open
 9	JWT-autentimine, registreerimine ja sisselogimine	api,autentimine	Nädal 2	E5 Turvalisus ja API kvaliteet	3	2026-11-20	open
 10	Rollid (User, Admin, Service), Swagger Authorize ja CORS	api,autentimine	Nädal 3	E5 Turvalisus ja API kvaliteet	2	2026-11-23	open
-11	React: projekti karkass, sisselogimine ja retseptide nimekiri	frontend	Nädal 3	E6 React-klient	3	2026-11-24	open
-12	React: retsepti detailvaade, portsjonid ja vorm valideerimisega	frontend	Nädal 3	E6 React-klient	3	2026-11-25	open
-13	React: nädala toiduplaani vaade	frontend	Nädal 3	E6 React-klient	3	2026-11-26	open
+11	MAUI: projekti karkass (MVVM), sisselogimine ja retseptide nimekiri	mobiil	Nädal 3	E6 MAUI mobiilirakendus	3	2026-11-24	open
+12	MAUI: retsepti detailvaade, portsjonid ja vorm valideerimisega	mobiil	Nädal 3	E6 MAUI mobiilirakendus	3	2026-11-25	open
+13	MAUI: nädala toiduplaani vaade	mobiil	Nädal 3	E6 MAUI mobiilirakendus	3	2026-11-26	open
 14	README (inglise k) ja dokumentatsioon (eesti k, PDF)	dokumentatsioon	Nädal 3	E8 Dokumentatsioon ja kaitsmine	3	2026-11-27	open
 18	Kaitsmise ettevalmistus ja esitlus	dokumentatsioon	Nädal 3	E8 Dokumentatsioon ja kaitsmine	2	2026-11-30	open
