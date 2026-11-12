@@ -1,0 +1,19 @@
+# number	title	labels	milestone	epic	hours	due	state
+15	Loo GitHubi repositoorium, backlog ja sildid	dokumentatsioon	Nädal 1	E1 Projekti seadistus ja planeerimine	1	2026-11-12	closed
+16	Loo lahenduse struktuur (API, testid)	backend	Nädal 1	E1 Projekti seadistus ja planeerimine	1	2026-11-12	closed
+1	Kavanda andmebaasi mudel, EF Core migratsioonid ja algandmed	andmebaas	Nädal 1	E2 Andmebaas ja arhitektuur	3	2026-11-12	closed
+2	Lisa Repository muster, teenuste kiht ja DI	backend	Nädal 1	E2 Andmebaas ja arhitektuur	2	2026-11-12	closed
+3	Retseptide CRUD: otsing, filter, sortimine ja leheküljed	api	Nädal 1	E3 Retseptid ja otsing	3	2026-11-12	closed
+17	Swagger kirjeldused ja .http fail	api,dokumentatsioon	Nädal 1	E3 Retseptid ja otsing	1	2026-11-12	closed
+4	Portsjonite arvu muutmisel koguste ümberarvutus	api	Nädal 1	E3 Retseptid ja otsing	2	2026-11-13	open
+5	Toiduplaani andmemudel ja migratsioon	andmebaas	Nädal 2	E4 Nädala toiduplaan	2	2026-11-16	open
+6	Nädala toiduplaani CRUD /api/meal-plans/{week}	api	Nädal 2	E4 Nädala toiduplaan	3	2026-11-17	open
+7	Ühtne veakäsitlus (ProblemDetails) ja logimine	api	Nädal 2	E5 Turvalisus ja API kvaliteet	2	2026-11-18	open
+8	Ühiktestid (vähemalt 8, neist 2 mockiga)	backend,testid	Nädal 2	E7 Testid ja kvaliteet	3	2026-11-19	open
+9	JWT-autentimine, registreerimine ja sisselogimine	api,autentimine	Nädal 2	E5 Turvalisus ja API kvaliteet	3	2026-11-20	open
+10	Rollid (User, Admin, Service), Swagger Authorize ja CORS	api,autentimine	Nädal 3	E5 Turvalisus ja API kvaliteet	2	2026-11-23	open
+11	React: projekti karkass, sisselogimine ja retseptide nimekiri	frontend	Nädal 3	E6 React-klient	3	2026-11-24	open
+12	React: retsepti detailvaade, portsjonid ja vorm valideerimisega	frontend	Nädal 3	E6 React-klient	3	2026-11-25	open
+13	React: nädala toiduplaani vaade	frontend	Nädal 3	E6 React-klient	3	2026-11-26	open
+14	README (inglise k) ja dokumentatsioon (eesti k, PDF)	dokumentatsioon	Nädal 3	E8 Dokumentatsioon ja kaitsmine	3	2026-11-27	open
+18	Kaitsmise ettevalmistus ja esitlus	dokumentatsioon	Nädal 3	E8 Dokumentatsioon ja kaitsmine	2	2026-11-30	open
