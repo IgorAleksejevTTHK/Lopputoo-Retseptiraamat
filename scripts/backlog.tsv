@@ -17,3 +17,10 @@
 13	MAUI: nädala toiduplaani vaade	mobiil	Nädal 3	E6 MAUI mobiilirakendus	3	2026-11-26	open
 14	README (inglise k) ja dokumentatsioon (eesti k, PDF)	dokumentatsioon	Nädal 3	E8 Dokumentatsioon ja kaitsmine	3	2026-11-27	open
 18	Kaitsmise ettevalmistus ja esitlus	dokumentatsioon	Nädal 3	E8 Dokumentatsioon ja kaitsmine	2	2026-11-30	open
+19	Toiduplaani algandmed ja .http näited	andmebaas	Nädal 2	E4 Nädala toiduplaan	1	2026-11-17	open
+20	Andmete valideerimine API-s ja veateated	api	Nädal 2	E5 Turvalisus ja API kvaliteet	1	2026-11-18	open
+21	Paroolide räsimine ja kasutajate algandmed	autentimine	Nädal 2	E5 Turvalisus ja API kvaliteet	2	2026-11-20	open
+22	MAUI: API klient, JWT ja SecureStorage	mobiil	Nädal 3	E6 MAUI mobiilirakendus	2	2026-11-24	open
+23	Android emulaatori seadistus (10.0.2.2, cleartext, launch profile)	mobiil	Nädal 3	E6 MAUI mobiilirakendus	1	2026-11-24	open
+24	GitHub Actions: API ja MAUI build	backend	Nädal 3	E7 Testid ja kvaliteet	1	2026-11-24	open
+25	ViewModelite ühiktestid (mock API klient)	testid	Nädal 3	E7 Testid ja kvaliteet	2	2026-11-26	open
