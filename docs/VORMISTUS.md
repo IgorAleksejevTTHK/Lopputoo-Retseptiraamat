@@ -71,10 +71,6 @@ Sisukorda, sissejuhatust, kokkuvõtet ja sellele järgnevaid osi **ei nummerdata
 - Tekstisisene viide: (Autor, aasta) või Autor (aasta); autorita veebilehel organisatsioon ja (s.a.).
 - Näide allikaloendis: `Microsoft. (s.a.). ASP.NET Core documentation. https://learn.microsoft.com/aspnet/core/`
 
-## Tehisaru kasutamine (juhendi peatükk 6)
-
-Kui tehisaru on töö sisu või koostamisprotsessi olulisel määral mõjutanud, tuleb selle kasutamine töös avalikustada: tööriista nimetus, kasutamise ajavahemik, eesmärk ning kuidas väljundit kasutati ja kontrolliti. Õpilane peab suutma selgitada töö käiku, põhjendada valikuid ja tõendada oma panust.
-
 ## Kaitsmine (juhendi peatükk 7)
 
 - Ettekanne 5–10 minutit: eesmärgid, probleem, valiku põhjendus, järeldused, ettepanekud, **isiklik panus**.
