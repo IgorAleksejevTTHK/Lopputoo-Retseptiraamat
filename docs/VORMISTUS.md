@@ -7,12 +7,12 @@ Selle faili järgi koostatakse `docs/` kaustas olev projekti dokumentatsioon.
 
 ```
 TALLINNA TEHNOLOOGIAKOLLEDŽ
-<Õppekava või osakond>
+Tarkvaraarendaja õppekava
 
 RETSEPTID JA TOIDUPLAAN
-<Töö liik: Lõpuprojekt (Programmeerimine ja Hajusrakendused)>
+Lõpuprojekt (Programmeerimine ja Hajusrakendused)
 
-Õpilane: Igor Aleksejev, <õpperühm>
+Õpilane: Igor Aleksejev, TARpv24
 Juhendajad: Marina Oleinik, Irina Merkulova
 
 Tallinn 2026
@@ -20,6 +20,7 @@ Tallinn 2026
 
 - Tiitellehel leheküljenumbrit ei kuvata, kuid see arvestatakse numeratsiooni hulka.
 - Pealkirja lõppu punkti ei panda.
+- Failinimi: `Aleksejev_Igor_TARpv24_Loputoo.pdf` (ja `.docx`).
 
 ## Töö osad
 
