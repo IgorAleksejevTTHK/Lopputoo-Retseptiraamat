@@ -9,6 +9,12 @@ GET {{host}}/api/recipes?ingredient=chicken&sortBy=prepTime&sortDir=asc&page=1&p
 ### Recipe details
 GET {{host}}/api/recipes/2
 
+### Recipe details recalculated for 6 servings (base is 4)
+GET {{host}}/api/recipes/2?servings=6
+
+### Invalid servings -> 400
+GET {{host}}/api/recipes/2?servings=0
+
 ### Not found -> 404
 GET {{host}}/api/recipes/9999
 

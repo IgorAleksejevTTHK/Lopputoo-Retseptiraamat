@@ -9,7 +9,7 @@ Deadline: 30.11.2026. One step per working day ("commit iga tööpäev"). No pul
 | Date | Scope | Status |
 |------|-------|--------|
 | 12.11 | Solution, data model (Users, Categories, Ingredients, Recipes, RecipeIngredients, RecipeSteps), migrations + seed, repositories, services, DI, recipe CRUD with search / ingredient filter / sorting / pagination, DTOs, Swagger XML docs, `.http` file, backlog script | done |
-| 13.11 | Servings recalculation `GET /api/recipes/{id}?servings=6` (logic in service) | todo |
+| 13.11 | Servings recalculation `GET /api/recipes/{id}?servings=6` (logic in service) | done |
 | 16.11 | Meal plan data model: MealPlan + MealPlanEntry tables, migration, seed | todo |
 | 17.11 | `CRUD /api/meal-plans/{week}` (ISO week, e.g. 2026-W47): repository, service, controller, DTOs, `.http` | todo |
 | 18.11 | Global error handling with ProblemDetails (custom exceptions, `IExceptionHandler`, no try/catch in controllers), logging; Swagger request/response examples for all endpoints (Swashbuckle.AspNetCore.Filters) | todo |

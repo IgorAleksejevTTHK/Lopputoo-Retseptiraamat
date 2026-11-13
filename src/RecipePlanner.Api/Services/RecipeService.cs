@@ -8,7 +8,7 @@ namespace RecipePlanner.Api.Services;
 public interface IRecipeService
 {
     Task<PagedResult<RecipeListItemDto>> GetRecipesAsync(RecipeQueryDto query, CancellationToken ct = default);
-    Task<RecipeDetailsDto?> GetRecipeAsync(int id, CancellationToken ct = default);
+    Task<RecipeDetailsDto?> GetRecipeAsync(int id, int? servings = null, CancellationToken ct = default);
     Task<RecipeDetailsDto> CreateAsync(RecipeCreateUpdateDto dto, int ownerId, CancellationToken ct = default);
     Task<RecipeDetailsDto?> UpdateAsync(int id, RecipeCreateUpdateDto dto, CancellationToken ct = default);
     Task<bool> DeleteAsync(int id, CancellationToken ct = default);
@@ -28,10 +28,10 @@ public class RecipeService(
         return new PagedResult<RecipeListItemDto>(dtos, query.Page, query.PageSize, total);
     }
 
-    public async Task<RecipeDetailsDto?> GetRecipeAsync(int id, CancellationToken ct = default)
+    public async Task<RecipeDetailsDto?> GetRecipeAsync(int id, int? servings = null, CancellationToken ct = default)
     {
         var recipe = await recipes.GetByIdAsync(id, ct);
-        return recipe is null ? null : ToDetails(recipe);
+        return recipe is null ? null : ToDetails(recipe, servings ?? recipe.Servings);
     }
 
     public async Task<RecipeDetailsDto> CreateAsync(RecipeCreateUpdateDto dto, int ownerId, CancellationToken ct = default)
@@ -43,7 +43,7 @@ public class RecipeService(
         await recipes.AddAsync(recipe, ct);
         await recipes.SaveChangesAsync(ct);
 
-        return (await GetRecipeAsync(recipe.Id, ct))!;
+        return (await GetRecipeAsync(recipe.Id, ct: ct))!;
     }
 
     public async Task<RecipeDetailsDto?> UpdateAsync(int id, RecipeCreateUpdateDto dto, CancellationToken ct = default)
@@ -58,7 +58,7 @@ public class RecipeService(
         await Apply(recipe, dto, ct);
         await recipes.SaveChangesAsync(ct);
 
-        return (await GetRecipeAsync(id, ct))!;
+        return (await GetRecipeAsync(id, ct: ct))!;
     }
 
     public async Task<bool> DeleteAsync(int id, CancellationToken ct = default)
@@ -108,9 +108,11 @@ public class RecipeService(
             recipe.Steps.Add(new RecipeStep { StepNumber = step++, Instruction = s.Instruction.Trim() });
     }
 
-    private static RecipeDetailsDto ToDetails(Recipe r) => new(
-        r.Id, r.Title, r.Description, r.Servings, r.PrepTimeMinutes,
+    private static RecipeDetailsDto ToDetails(Recipe r, int servings) => new(
+        r.Id, r.Title, r.Description, servings, r.Servings, r.PrepTimeMinutes,
         r.CategoryId, r.Category?.Name ?? "", r.OwnerId, r.Owner?.UserName ?? "", r.CreatedAt,
-        r.Ingredients.Select(i => new RecipeIngredientDto(i.IngredientId, i.Ingredient?.Name ?? "", i.Quantity, i.Unit)).ToList(),
+        r.Ingredients.Select(i => new RecipeIngredientDto(
+            i.IngredientId, i.Ingredient?.Name ?? "",
+            ServingsCalculator.Scale(i.Quantity, r.Servings, servings), i.Unit)).ToList(),
         r.Steps.OrderBy(s => s.StepNumber).Select(s => new RecipeStepDto(s.StepNumber, s.Instruction)).ToList());
 }

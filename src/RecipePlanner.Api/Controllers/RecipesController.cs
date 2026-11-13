@@ -22,12 +22,20 @@ public class RecipesController(IRecipeService service) : ControllerBase
         Ok(await service.GetRecipesAsync(query, ct));
 
     /// <summary>Get one recipe with ingredients and steps.</summary>
+    /// <param name="id">Recipe id.</param>
+    /// <param name="servings">Optional number of servings (1-100). Ingredient quantities are recalculated for it.</param>
+    /// <param name="ct">Cancellation token.</param>
+    /// <remarks>Example: <c>GET /api/recipes/2?servings=6</c> returns the soup quantities for 6 servings instead of 4.</remarks>
     [HttpGet("{id:int}")]
     [ProducesResponseType(typeof(RecipeDetailsDto), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<ActionResult<RecipeDetailsDto>> GetById(int id, CancellationToken ct)
+    public async Task<ActionResult<RecipeDetailsDto>> GetById(
+        int id,
+        [FromQuery, Range(ServingsCalculator.MinServings, ServingsCalculator.MaxServings)] int? servings,
+        CancellationToken ct)
     {
-        var recipe = await service.GetRecipeAsync(id, ct);
+        var recipe = await service.GetRecipeAsync(id, servings, ct);
         return recipe is null ? NotFound() : Ok(recipe);
     }
 

@@ -11,9 +11,12 @@ public record RecipeIngredientDto(int IngredientId, string Name, decimal Quantit
 
 public record RecipeStepDto(int StepNumber, string Instruction);
 
-/// <summary>Full recipe with ingredients and steps.</summary>
+/// <summary>
+/// Full recipe with ingredients and steps.
+/// <c>Servings</c> is the number the quantities are shown for; <c>BaseServings</c> is the number stored in the recipe.
+/// </summary>
 public record RecipeDetailsDto(
-    int Id, string Title, string? Description, int Servings, int PrepTimeMinutes,
+    int Id, string Title, string? Description, int Servings, int BaseServings, int PrepTimeMinutes,
     int CategoryId, string Category, int OwnerId, string Owner, DateTime CreatedAt,
     IReadOnlyList<RecipeIngredientDto> Ingredients, IReadOnlyList<RecipeStepDto> Steps);
 
